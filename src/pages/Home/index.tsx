@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { MdAddShoppingCart } from 'react-icons/md';
 import { useCart } from '../../hooks/useCart';
 
 import { api } from '../../services/api';
@@ -24,9 +25,14 @@ const Home = (): JSX.Element => {
   const [products, setProducts] = useState<ProductFormatted[]>([]);
   const { addProduct, cart } = useCart();
 
-  // const cartItemsAmount = cart.reduce((sumAmount, product) => {
-  //   // TODO
-  // }, {} as CartItemsAmount)
+  const cartItemsAmount = cart.reduce((sumAmount, product) => {
+    const updateSumAmount = {
+      ...sumAmount,
+      [product.id]: product.amount
+      }
+
+    return updateSumAmount
+  }, {} as CartItemsAmount)
 
   useEffect(() => {
     async function loadProducts() {
@@ -55,8 +61,8 @@ const Home = (): JSX.Element => {
               onClick={() => handleAddProduct(id)}
             >
             <div data-testid="cart-product-quantity">
-              {/* <MdAddShoppingCart size={16} color="#FFF" />
-              {cartItemsAmount[id] || 0} */}
+              <MdAddShoppingCart size={16} color="#FFF" />
+              {cartItemsAmount[id] || 0}
             </div>
   
             <span>ADICIONAR AO CARRINHO</span>
