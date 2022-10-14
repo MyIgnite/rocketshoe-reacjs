@@ -5,7 +5,7 @@ https://rocketshoes-ignite-github-renan-tsx.netlify.app
 
 Back-and in Github
 
-https://my-json-server.typicode.com/MyIgnite/rocketshoes-backend
+https://my-json-server.typicode.com/MyIgnite/rocketshoes
 
 Open VSCode Online
 
