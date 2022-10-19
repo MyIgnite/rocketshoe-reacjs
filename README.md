@@ -1,5 +1,5 @@
 # rocketshoes
-Shopping cart
+Desafio: Shopping cart
 
 https://rocketshoes-ignite-github-renan-tsx.netlify.app
 
